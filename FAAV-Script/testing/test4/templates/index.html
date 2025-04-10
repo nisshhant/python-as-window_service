@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Flask UI</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 30px; }
+        input[type="text"] { padding: 8px; width: 250px; }
+        button { padding: 8px 16px; }
+        .response { margin-top: 20px; font-weight: bold; color: green; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Flask App 👋</h1>
+    <form method="post">
+        <label>Say something:</label><br>
+        <input type="text" name="user_input" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if message %}
+    <div class="response">{{ message }}</div>
+    {% endif %}
+</body>
+</html>
